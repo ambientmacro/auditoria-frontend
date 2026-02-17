@@ -1,0 +1,26 @@
+:root {
+  --cobalt: #0047AB;
+  --green: #1E8E3E;
+  --gray-light: #F4F6F8;
+  --gray-dark: #4A4A4A;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* impede scroll global */
+}
+
+
+button {
+  cursor: pointer;
+}

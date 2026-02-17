@@ -1,0 +1,217 @@
+/* ===== LAYOUT GERAL ===== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 190px;
+  background-image: linear-gradient(to bottom, #07335a, #69cfd4);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 70vw;
+    max-width: 320px;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    background: #07335a;
+    transition: transform 0.3s;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+/* ===== LOGO ===== */
+.logo {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== MENU TOGGLE ===== */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #07335a;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    z-index: 1100;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+}
+
+/* ===== MENU ===== */
+.sidebar nav {
+  display: flex;
+  font-size: 15px;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: rgb(249, 249, 249);
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: rgba(228, 26, 26, 0.15);
+  color: #1E8E3E;
+}
+
+/* ===== FOOTER ===== */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+/* ===== BOTÃO LOGOUT ===== */
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2f994d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #166B2E;
+}
+
+/* ===== CONTEÚDO ===== */
+.content {
+  flex: 1;
+  padding: 30px;
+  background-image: linear-gradient(to bottom, #5e6a6e, #b4c6c7);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* 🔥 permite scroll interno */
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+    margin-top: 48px;
+  }
+}
+
+/* ===== BOTÃO HAMBÚRGUER ===== */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #07335a;
+  z-index: 1100;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .content {
+    padding: 20px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* ===== TABELAS RESPONSIVAS ===== */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 24px;
+  }
+  table {
+    min-width: 600px;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+}
+
+}
+
